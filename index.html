@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css"
+      integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/base.css" />
+
+    <script type="module" src="js/main.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>DeFi Calculator</h1>
+      </header>
+
+      <main>
+        <div class="mb-3">
+          <label for="ticker" class="form-label">Ticker</label>
+          <p class="text-muted">
+            <small>Enter the name of the ticker (ex: BTC/ETH/USDT)</small>
+          </p>
+          <input type="text" class="form-control" id="ticker" />
+        </div>
+
+        <div class="mb-3">
+          <label for="apy" class="form-label">APY (%)</label>
+          <p class="text-muted"><small>Enter the APY (ex: 12.5)</small></p>
+          <input type="number" class="form-control" id="apy" />
+        </div>
+
+        <div class="mb-3">
+          <label for="duration" class="form-label">Duration (years)</label>
+          <p class="text-muted">
+            <small>Enter duration in years (ex: 2)</small>
+          </p>
+          <input type="number" class="form-control" id="duration" />
+        </div>
+
+        <div class="mb-3">
+          <label for="principal" class="form-label">Principal</label>
+          <p class="text-muted">
+            <small>Enter the investment amount (ex: 100)</small>
+          </p>
+          <input type="number" class="form-control" id="principal" />
+        </div>
+
+        <div class="mb-3">
+          <label for="reinvest-frequency" class="form-label"
+            >Reinvest Frequency</label
+          >
+          <p class="text-muted">
+            <small>How often will you reinvest the interest generated?</small>
+          </p>
+          <select class="form-control" id="reinvest-frequency">
+            <option></option>
+            <option value="d">Daily</option>
+            <option value="w">Weekly</option>
+            <option value="m">Monthly</option>
+            <option value="q">Quarterly</option>
+            <option value="y">Yearly</option>
+          </select>
+        </div>
+
+        <button class="btn btn-primary" id="calculate">Calculate</button>
+      </main>
+    </div>
+  </body>
+</html>
